@@ -1,3 +1,19 @@
+#Funciones para validar datos ingresados por el usuario:
+
+def obtener_integer(mensaje):
+    while True:
+        try:
+            return int(input(mensaje))
+        except ValueError:
+            print("Error: Ingrese un número entero válido.")
+
+def obtener_float(mensaje):
+    while True:
+        try: 
+            return float(input(mensaje))
+        except ValueError:
+            print("Error: Ingrese un número decimal válido (por ejemplo, 1.75).")
+
 nombre = str(input('Ingrese su nombre: '))
 edad = int(input('Ingrese su edad: '))
 altura = float(input('Ingrese su altura en metros (por ejemplo, 1.75): '))
