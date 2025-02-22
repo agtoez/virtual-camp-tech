@@ -14,10 +14,20 @@ def obtener_float(mensaje):
         except ValueError:
             print("Error: Ingrese un número decimal válido (por ejemplo, 1.75).")
 
-nombre = str(input('Ingrese su nombre: '))
-edad = int(input('Ingrese su edad: '))
-altura = float(input('Ingrese su altura en metros (por ejemplo, 1.75): '))
-mascota = (input('¿Tiene mascota? (sí/no) ')).strip().lower() == 'sí'
+def obtener_booleano(mensaje):
+    while True:
+        respuesta = input(mensaje).strip().lower()
+        if respuesta in ['sí', 'si']:
+            return True
+        elif respuesta == 'no':
+            return False
+        else:
+            print("Error: Responda 'Sí' o 'No'.")
+
+nombre = input('Ingrese su nombre:  ').strip()
+edad = obtener_integer('Ingrese su edad: ')
+altura = obtener_float('Ingrese su altura en metros (por ejemplo, 1.75): ')
+mascota = obtener_booleano("¿Tiene mascota? (sí/no): ")
 
 if edad <= 50:
     print(f"¡Hola {nombre}! Tenés {edad} años, medís {altura} metros y es {'cierto' if mascota else 'falso'} que tenés mascota.")
