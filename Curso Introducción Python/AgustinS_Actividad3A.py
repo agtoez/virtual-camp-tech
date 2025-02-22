@@ -25,3 +25,5 @@ def adivinarNumero():
 
 
 adivinarNumero()
+
+#Observaciones para mejorar: *El programa no se reinicia una vez adivinado el número, es decir, el número seguirá siendo el mismo y los intentos se seguirán acumulando en el contador.
