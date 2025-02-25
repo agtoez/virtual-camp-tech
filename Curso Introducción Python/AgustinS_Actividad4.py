@@ -27,7 +27,13 @@ def mostrarContacto(agenda):
         print(f"{i}. Nombre: {nombre} | Teléfono: {telefono} | Email: {mail}")
 
 def buscarContacto(agenda):
-    pass
+    nombre = input("Buscar por nombre: ").strip()
+    for contacto in agenda:
+        if contacto[0].lower() == nombre.lower():
+            print(f"Contacto encontrado: {contacto[0]} | Teléfono: {contacto[1]} | Email: {contacto[2]}")
+            return
+    print("Contacto no encontrado.")
+    
 def eliminarContacto(agenda):
     pass
 def actualizarContacto(agenda):
