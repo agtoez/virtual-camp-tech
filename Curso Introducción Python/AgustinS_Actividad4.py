@@ -47,7 +47,7 @@ def actualizarContacto(agenda):
     nombre = input("Ingrese el nombre del contacto a actualizar: ").strip()
     for i, contacto in enumerate(agenda):
         if contacto[0].lower() == nombre.lower():
-            print(f"📌 Contacto actual: {contacto[0]} | Teléfono: {contacto[1]} | Email: {contacto[2]}")
+            print(f" Contacto actual: {contacto[0]} | Teléfono: {contacto[1]} | Email: {contacto[2]}")
             nuevo_telefono = input("Ingrese el nuevo teléfono (dejar vacío para no cambiar): ").strip()
             nuevo_email = input("Ingrese el nuevo email (dejar vacío para no cambiar): ").strip()
             
